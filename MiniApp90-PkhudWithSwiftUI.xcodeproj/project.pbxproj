@@ -11,6 +11,9 @@
 		8739302828C5A31500624FCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8739302728C5A31500624FCB /* ContentView.swift */; };
 		8739302A28C5A31600624FCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8739302928C5A31600624FCB /* Assets.xcassets */; };
 		8739302D28C5A31600624FCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8739302C28C5A31600624FCB /* Preview Assets.xcassets */; };
+		8739303528C5A35900624FCB /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 8739303428C5A35900624FCB /* PKHUD */; };
+		8739303728C5A3A900624FCB /* ViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8739303628C5A3A900624FCB /* ViewExtention.swift */; };
+		8739303928C5A41800624FCB /* PKHUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8739303828C5A41800624FCB /* PKHUDView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,8 @@
 		8739302728C5A31500624FCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8739302928C5A31600624FCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8739302C28C5A31600624FCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8739303628C5A3A900624FCB /* ViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtention.swift; sourceTree = "<group>"; };
+		8739303828C5A41800624FCB /* PKHUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKHUDView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8739303528C5A35900624FCB /* PKHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +61,8 @@
 				8739302728C5A31500624FCB /* ContentView.swift */,
 				8739302928C5A31600624FCB /* Assets.xcassets */,
 				8739302B28C5A31600624FCB /* Preview Content */,
+				8739303628C5A3A900624FCB /* ViewExtention.swift */,
+				8739303828C5A41800624FCB /* PKHUDView.swift */,
 			);
 			path = "MiniApp90-PkhudWithSwiftUI";
 			sourceTree = "<group>";
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = "MiniApp90-PkhudWithSwiftUI";
+			packageProductDependencies = (
+				8739303428C5A35900624FCB /* PKHUD */,
+			);
 			productName = "MiniApp90-PkhudWithSwiftUI";
 			productReference = 8739302228C5A31500624FCB /* MiniApp90-PkhudWithSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 8739301928C5A31500624FCB;
+			packageReferences = (
+				8739303328C5A35900624FCB /* XCRemoteSwiftPackageReference "PKHUD" */,
+			);
 			productRefGroup = 8739302328C5A31500624FCB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8739303728C5A3A900624FCB /* ViewExtention.swift in Sources */,
+				8739303928C5A41800624FCB /* PKHUDView.swift in Sources */,
 				8739302828C5A31500624FCB /* ContentView.swift in Sources */,
 				8739302628C5A31500624FCB /* MiniApp90_PkhudWithSwiftUIApp.swift in Sources */,
 			);
@@ -339,6 +355,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8739303328C5A35900624FCB /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8739303428C5A35900624FCB /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8739303328C5A35900624FCB /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8739301A28C5A31500624FCB /* Project object */;
 }

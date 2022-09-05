@@ -6,11 +6,18 @@
 //
 
 import SwiftUI
+import PKHUD
 
 struct ContentView: View {
+    @State var PkhudProgress: Bool = false
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Button("progress") {
+                PkhudProgress.toggle()
+            }
+        }
+        .PKHUD(isPresented: $PkhudProgress, HUDContent: .labeledProgress(title: "進行中です", subtitle: "読み込まれていますよ"))
     }
 }
 
@@ -19,3 +26,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
