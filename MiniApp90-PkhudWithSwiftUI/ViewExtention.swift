@@ -9,9 +9,11 @@ import SwiftUI
 import PKHUD
 
 extension View {
-    public func PKHUD(isPresented: Binding<Bool>, HUDContent: HUDContentType) -> some View {
-        PKHUDViewModifier(isPresented: isPresented, HUDContent: HUDContent, parent: self)
+
+    public func PKHUD(isPresented: Binding<Bool>, HUDContent: HUDContentType, delay: Double) -> some View {
+        PKHUDViewModifier(isPresented: isPresented, HUDContent: HUDContent, delay: delay, parent: self)
     }
+
 }
 
 

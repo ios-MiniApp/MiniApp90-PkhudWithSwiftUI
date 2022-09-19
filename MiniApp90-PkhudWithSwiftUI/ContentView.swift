@@ -10,14 +10,22 @@ import PKHUD
 
 struct ContentView: View {
     @State var PkhudProgress: Bool = false
+    @State var PkhudSuccess: Bool = false
 
     var body: some View {
         VStack {
-            Button("progress") {
-                PkhudProgress.toggle()
+            Button("通信開始") {
+                PkhudProgress = true
+
+                // 通信している仮定で2秒あける
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    PkhudProgress = false
+                    PkhudSuccess = true
+                }
             }
         }
-        .PKHUD(isPresented: $PkhudProgress, HUDContent: .labeledProgress(title: "進行中です", subtitle: "読み込まれていますよ"))
+        .PKHUD(isPresented: $PkhudProgress, HUDContent: .labeledProgress(title: "通信中", subtitle: "通信しています"), delay: .infinity)
+        .PKHUD(isPresented: $PkhudSuccess, HUDContent: .labeledSuccess(title: "成功", subtitle: "通信に成功しました"), delay: 1.5)
         /*
          以下サンプル
                 .PKHUD(isPresented: $progress, HUDContent: .progress, delay: 1.0)
